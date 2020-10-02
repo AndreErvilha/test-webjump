@@ -2,13 +2,28 @@
   "name": "assessment-frontend",
   "version": "1.0.0",
   "description": "Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).",
-  "main": "app.js",
+  "main": "backend/app.js",
   "dependencies": {
     "connect": "~3.6.6",
     "serve-static": "~1.13.2"
   },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.6.1",
+    "gulp": "4.0.2",
+    "gulp-babel": "7.0.1",
+    "gulp-concat": "2.6.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-sass": "4.0.1",
+    "gulp-typescript": "4.0.2",
+    "gulp-uglify": "3.0.0",
+    "gulp-uglifycss": "1.0.9",
+    "typescript": "2.8.3"
+  },
   "scripts": {
-    "start": "node app.js"
+    "start": "node backend/app.js",
+    "frontend_build": "gulp frontend/",
+    "build": "gulp --production"
   },
   "repository": {
     "type": "git",

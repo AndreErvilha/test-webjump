@@ -2,7 +2,7 @@ var app = require('connect')()
 var serveStatic = require('serve-static')
 
 // Serve up mock-api folder
-app.use('/api', serveStatic('mock-api', {
+app.use('/api', serveStatic('backend/mock-api', {
   'index': false,
   'setHeaders': setJsonHeaders
 }))
