@@ -8,17 +8,17 @@ const htmlmin = require('gulp-htmlmin')
 
 function appHTML() {
     console.log("html")
-    return gulp.src('frontend/src/**/*.html',{'cwd':'../../'})
+    return gulp.src('frontend/src/**/*.html',{'cwd':'../'})
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('public',{'cwd':'../../'}))
+        .pipe(gulp.dest('public',{'cwd':'../'}))
 }
 
 function appCSS() {
-    return gulp.src('frontend/src/assets/sass/index.scss',{'cwd':'../../','allowEmpty':true})
+    return gulp.src('frontend/src/assets/sass/index.scss',{'cwd':'../','allowEmpty':true})
         .pipe(sass().on('error', sass.logError))
         .pipe(uglifycss({ "uglyComments": true }))
         .pipe(concat('app.min.css'))
-        .pipe(gulp.dest('public/assets/css',{'cwd':'../../'}))
+        .pipe(gulp.dest('public/assets/css',{'cwd':'../'}))
 }
 
 function appJS() {
@@ -26,12 +26,12 @@ function appJS() {
         .pipe(babel({ presets: ['ENV'] }))
         .pipe(uglify())
         .pipe(concat('app.min.js'))
-        .pipe(gulp.dest('public/assets/js',{'cwd':'../../'}))
+        .pipe(gulp.dest('public/assets/js',{'cwd':'../'}))
 }
 
 function appIMG() {
-    return gulp.src('src/assets/imgs/**/*.*',{'cwd':'../../'})
-        .pipe(gulp.dest('public/assets/imgs',{'cwd':'../../'}))
+    return gulp.src('src/assets/imgs/**/*.*',{'cwd':'../'})
+        .pipe(gulp.dest('public/assets/imgs',{'cwd':'../'}))
 }
 
 gulp.task('appHTML', appHTML)

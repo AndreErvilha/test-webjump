@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "node backend/app.js",
-    "build_dev": "gulp -f ./frontend/src/gulpfile.js",
+    "build_dev": "gulp -f ./frontend/gulpfile.js",
     "build_prod": "gulp --production"
   },
   "repository": {
