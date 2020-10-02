@@ -7,17 +7,18 @@ const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
 
 function appHTML() {
-    return gulp.src('src/**/*.html')
+    console.log("html")
+    return gulp.src('frontend/src/**/*.html',{'cwd':'../../'})
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('public',{'cwd':'../../'}))
 }
 
 function appCSS() {
-    return gulp.src('src/assets/sass/index.scss')
+    return gulp.src('frontend/src/assets/sass/index.scss',{'cwd':'../../','allowEmpty':true})
         .pipe(sass().on('error', sass.logError))
         .pipe(uglifycss({ "uglyComments": true }))
         .pipe(concat('app.min.css'))
-        .pipe(gulp.dest('build/assets/css'))
+        .pipe(gulp.dest('public/assets/css',{'cwd':'../../'}))
 }
 
 function appJS() {
@@ -25,12 +26,12 @@ function appJS() {
         .pipe(babel({ presets: ['ENV'] }))
         .pipe(uglify())
         .pipe(concat('app.min.js'))
-        .pipe(gulp.dest('build/assets/js'))
+        .pipe(gulp.dest('public/assets/js',{'cwd':'../../'}))
 }
 
 function appIMG() {
-    return gulp.src('src/assets/imgs/**/*.*')
-        .pipe(gulp.dest('build/assets/imgs'))
+    return gulp.src('src/assets/imgs/**/*.*',{'cwd':'../../'})
+        .pipe(gulp.dest('public/assets/imgs',{'cwd':'../../'}))
 }
 
 gulp.task('appHTML', appHTML)
