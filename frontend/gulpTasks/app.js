@@ -22,7 +22,7 @@ function appCSS() {
 }
 
 function appJS() {
-    return gulp.src('src/assets/js/**/*.js')
+    return gulp.src('frontend/src/assets/js/**/*.js',{'cwd':'../'})
         .pipe(babel({ presets: ['ENV'] }))
         .pipe(uglify())
         .pipe(concat('app.min.js'))
@@ -30,8 +30,8 @@ function appJS() {
 }
 
 function appIMG() {
-    return gulp.src('src/assets/imgs/**/*.*',{'cwd':'../'})
-        .pipe(gulp.dest('public/assets/imgs',{'cwd':'../'}))
+    return gulp.src('frontend/src/assets/img/**/*.*',{'cwd':'../'})
+        .pipe(gulp.dest('public/assets/img',{'cwd':'../'}))
 }
 
 gulp.task('appHTML', appHTML)

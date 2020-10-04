@@ -1,0 +1,153 @@
+$primary-color : #F00;
+$secundary-color  : #0AF;
+
+.black{
+    background-color: #000;
+}
+
+.primary-color{
+    background-color: $primary-color;
+}
+
+.secundary-color{
+    background-color: $secundary-color;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    padding: none;
+    margin: 0px;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.search-icon{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 320px;
+}
+
+.content{
+    width: 1024px;
+    min-width: 320px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        height: 90px;
+    }
+    .search-input{
+        height: 50px;
+        display: flex;
+        flex-grow: 10;
+        align-items: center;
+        justify-content: flex-end;
+        
+
+        input, button{
+            margin: 0px;
+            height: 40px;
+            box-sizing: border-box;
+        }
+        input{
+            flex-grow: 10;
+            max-width: 50%;
+            min-width: 300px;
+            border-width: 1px 0px 1px 1px;
+            border-color: #AAA;
+            border-style: solid;
+        }
+        button{
+            font-weight: bold;
+            padding: 5px 20px;
+            border-width: 0px;
+            color: white;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.auth-bar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 12px;
+
+    p{
+        color: white;
+        margin: 5px 5px;
+    }
+
+    a{
+        color: white;
+        font-weight: 600;
+    }
+}
+
+.search-icon{
+    background-color: yellow;
+}
+
+.menu {
+    display: flex;
+
+    ul {
+        color: black;
+        display: flex;
+        padding: 0px;
+
+        li {
+            margin: 0 5px 0 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            text-align: center;
+            align-items: center;
+
+            a {
+                padding: 15px 30px;
+                font-weight: 800;
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        li:hover{
+            background-color: $secundary-color;
+        }
+    }
+}
+@media(max-width: 1024px){
+    .auth-bar, .search-input{
+        padding: 0 20px;
+    }
+}
+@media(max-width: 767px){
+    .menu-toggle{
+        display: block;
+    }
+    .search-icon{
+        display: block;
+    }
+    .menu{
+        display: none;
+    }
+    .header .search-input{
+        display: none;
+    }
+    .auth-bar{
+        justify-content: center;
+    }
+}
