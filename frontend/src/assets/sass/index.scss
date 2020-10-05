@@ -15,16 +15,7 @@ $secundary-color  : #0AF;
 
 * {
     font-family: 'Open Sans', sans-serif;
-    padding: none;
     margin: 0px;
-}
-
-.menu-toggle{
-    display: none;
-}
-
-.search-icon{
-    display: none;
 }
 
 .container{
@@ -44,6 +35,10 @@ $secundary-color  : #0AF;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .menu-toggle{
+        display: none;
+        padding: 15px;
+    }
     img{
         height: 90px;
     }
@@ -76,6 +71,10 @@ $secundary-color  : #0AF;
             background-color: $primary-color;
         }
     }
+    .search-icon{
+        display: none;
+        padding: 15px;
+    }
 }
 
 .auth-bar{
@@ -83,6 +82,7 @@ $secundary-color  : #0AF;
     justify-content: flex-end;
     align-items: center;
     font-size: 12px;
+    padding: 0 5px;
 
     p{
         color: white;
@@ -95,10 +95,6 @@ $secundary-color  : #0AF;
     }
 }
 
-.search-icon{
-    background-color: yellow;
-}
-
 .menu {
     display: flex;
 
@@ -108,7 +104,7 @@ $secundary-color  : #0AF;
         padding: 0px;
 
         li {
-            margin: 0 5px 0 0;
+            margin: 0 20px 0 0;
             list-style-type: none;
             display: flex;
             flex-wrap: nowrap;
@@ -117,7 +113,7 @@ $secundary-color  : #0AF;
             align-items: center;
 
             a {
-                padding: 15px 30px;
+                padding: 15px 15px;
                 font-weight: 800;
                 color: white;
                 text-decoration: none;
@@ -129,17 +125,101 @@ $secundary-color  : #0AF;
         }
     }
 }
+
+.path{
+    display: flex;
+    padding: 15px 15px;
+
+    p, label{
+        font-size: 14px;
+        
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    :last-child>a{
+        color: $primary-color;
+    }
+
+    label{
+        margin: 0 5px;
+        color: #AAA
+    }
+}
+
+.body{
+    display: flex;
+    box-sizing: border-box;
+    height: 500px;
+    max-width: 1024-30px;
+    margin: 0 15px;
+
+    .sidebar{
+        width: 220px;
+        border: 1px solid #CCC;
+    }   
+    .product-grid{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 10;
+        justify-content: space-around;
+        margin-left: 15px;
+    }
+    .product{
+        display: block;
+        width: 100%;
+        background-color: cadetblue;
+    }
+}
+.category-name{
+    color: $primary-color;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    font-size: 1.6em;
+}
+.filters{
+    display: flex;
+    flex-grow: 10;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    padding: 10px 0;
+    margin: 5px 0px;
+    align-items: center;
+}
+.fa{
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+.fa:hover   {
+    background-color: $secundary-color;
+}
+.order-by{
+    display: flex;
+    box-sizing: border-box;
+    flex-grow: 10;
+    justify-content: flex-end;
+}
 @media(max-width: 1024px){
     .auth-bar, .search-input{
         padding: 0 20px;
     }
 }
+
 @media(max-width: 767px){
-    .menu-toggle{
-        display: block;
+    .content{
+        max-width: 320px;
     }
-    .search-icon{
-        display: block;
+    .header{
+        img{
+            height: 70px;
+        }
+        .menu-toggle,.search-icon{
+            display: block;
+        }
     }
     .menu{
         display: none;
@@ -149,5 +229,34 @@ $secundary-color  : #0AF;
     }
     .auth-bar{
         justify-content: center;
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        .sidebar{
+            margin: 0 15px;
+            width: 320-30px;
+        }
+        .product-grid{
+            display: block;
+            margin: 0 15px;
+            padding: 0px;
+            width: 320-30px;
+            .category-name{
+                line-height: normal;
+            }
+            .filters{
+                margin: 0 15px;
+                padding: 0px;
+                width: 320-30px;
+            }
+            .product{
+                display: block;
+                max-width: 100%;
+            }
+        }
     }
 }
