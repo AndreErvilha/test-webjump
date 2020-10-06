@@ -31,7 +31,7 @@ function appJS() {
 
 function appIMG() {
     return gulp.src('frontend/src/assets/img/**/*.*',{'cwd':'../'})
-        .pipe(gulp.dest('public/assets/img',{'cwd':'../'}))
+        .pipe(gulp.dest('public/media',{'cwd':'../'}))
 }
 
 gulp.task('appHTML', appHTML)

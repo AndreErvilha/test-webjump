@@ -9,6 +9,8 @@ app.use('/api', serveStatic('backend/mock-api', {
  
 // Set header to force download
 function setJsonHeaders (res, path) {
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT");
   res.setHeader('Content-type', 'application/json')
 }
 

@@ -24,8 +24,8 @@
     "typescript": "2.8.3"
   },
   "scripts": {
-    "start": "node backend/app.js",
-    "build_dev": "gulp -f ./frontend/gulpfile.js",
+    "backend": "node backend/app.js",
+    "frontend": "gulp -f ./frontend/gulpfile.js",
     "build_prod": "gulp --production"
   },
   "repository": {
