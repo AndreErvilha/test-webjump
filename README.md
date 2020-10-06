@@ -1,4 +1,5 @@
 # Teste André Ervilha - DEV WEB (FRONTEND)
+## Apresentação
 Essa página foi desenvolvida para ser responsiva, conter conteúdos dinâmicos e possuir codigo simplificado para melhoria do desempenho.
 
 - Design responsivo nos breakpoints 320px, 768px, 1024px e 1440px
@@ -7,12 +8,14 @@ Essa página foi desenvolvida para ser responsiva, conter conteúdos dinâmicos 
 - Utiliza BABEL para transpilação de js para uma versão mais suportada
 - Utiliza GUMP para realização do build, minificação, webserver e livereload
 
-
+## Executar o código
 Para rodar o projeto execute os códigos abaixo:
 ```
 cd ASSESSMENT-FRONTEND/
 npm run frontend
 ```
+
+
 
 # Quer ser desenvolvedor frontend na Webjump?
 Criamos este teste para avaliar seus conhecimentos e habilidades frontend (HTML, CSS e JavaScript).
