@@ -12,9 +12,11 @@ Essa página foi desenvolvida para ser responsiva, conter conteúdos dinâmicos 
 Para rodar o projeto execute os códigos abaixo:
 ```
 cd ASSESSMENT-FRONTEND/
+npm install
 npm run frontend
 ```
-
+## Melhorias
+- Aplicar filtro de preços e cores
 
 
 # Quer ser desenvolvedor frontend na Webjump?

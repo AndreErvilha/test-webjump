@@ -1,16 +1,16 @@
-$primary-color : #F00;
-$secundary-color  : #0AF;
+$primary-color: #cc0d1f;
+$secundary-color: #80bdb8;
 
 .red{
-    background-color: red;
+    background-color: $primary-color;
 }
 
 .orange{
-    background-color: #F70;
+    background-color:#f36224;
 }
 
 .blue{
-    background-color: #07F;
+    background-color: $secundary-color;
 }
 
 .black{
